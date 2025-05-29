@@ -62,7 +62,36 @@
 
 ## 📌 后续计划
 
-- 进行更多样本的测试（如多张图片、不同文本提示）  
-- 探索模型不同配置参数对输出结果的影响  
-- 记录推理结果以备后续分析  
+- 尝试在更改图片后本地运行模型并且输出结果，看结果是否符合输入的图片。
+- 
+# Step 2 - 多图问答任务测试记录  
+🗓️ 日期：2025年5月29日  
+🎯 测试目标：在更改了输入图像的基础上，测试模型是否能够结合视觉信息生成合理的自然语言回答  
 
+🧠 测试背景  
+该任务基于 OpenFlamingo 模型的多模态输入特性。通过更改输入图像，并在文本输入中使用 `<image>` 占位符标识图像位置，观察模型是否能够根据多张图片的组合推理生成回答。
+
+🧪 测试设置  
+- 输入图像：3 张本地图片  
+  - George Best与The beatles 在艾比路上过马路（人物）  
+  - Lenna（经典测试图）  
+  - 炉石传说游戏截图（测试模型处理复杂图像内容的能力）  
+- 输入文本模板：
+  - <image>An image of some people.<|endofchunk|>
+  - <image>An image of a woman.<|endofchunk|>
+  - <image>Question: There are
+
+📤 输出内容  
+  - <image>An image of some people.<|endofchunk|>
+  - <image>An image of a woman.<|endofchunk|>
+  - <image>Question: There are Decks in Hearthstone, but I don’t know what they are called.<|endofchunk|>
+
+📌 分析与结论  
+- 模型能够成功处理多图输入并生成与第三张图像内容相关的回答
+- 模型能够成功识别比较小众的图像（如：炉石传说）
+- <|endofchunk|> 分隔符使用有效引导模型识别图片与语言片段边界  
+
+📌 后续计划  
+- 测试不同提示语设计对结果的影响  
+- 尝试引入中文图像提示，评估模型对中文多模态问答的兼容性  
+- 准备加入更多具有挑战性的图像内容，拓展测试范围  
