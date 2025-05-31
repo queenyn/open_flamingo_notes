@@ -11,11 +11,11 @@
 
 | 模块 | 说明 |
 |------|------|
-| [图像编码器](./exploration/01_vision_encoder/) | ViT、ResNet、CLIP，理解输入处理、结构与替换方案 |
-| [文本编码器](./exploration/02_text_encoder/) | Transformer/LLaMA 结构与注意力机制，处理 prompt |
-| [自监督与对比学习](./exploration/03_ssl_contrastive/) | SimCLR / MAE / BYOL 等训练目标与视觉预训练思想 |
-| [多模态融合机制](./exploration/04_multimodal_fusion/) | Cross-Attention、Perceiver Resampler、Prompt 拼接 |
-| [实验管理与调试](./exploration/05_experiment_management/) | PyTorch 训练流程、wandb、模型替换控制实验设计 |
+| [图像编码器](./experiment_logs/01_vision_encoder/) | ViT、ResNet、CLIP，理解输入处理、结构与替换方案 |
+| [文本编码器](./experiment_logs/02_text_encoder/) | Transformer/LLaMA 结构与注意力机制，处理 prompt |
+| [自监督与对比学习](./experiment_logs/03_ssl_contrastive/) | SimCLR / MAE / BYOL 等训练目标与视觉预训练思想 |
+| [多模态融合机制](./experiment_logs/04_multimodal_fusion/) | Cross-Attention、Perceiver Resampler、Prompt 拼接 |
+| [实验管理与调试](./experiment_logs/05_experiment_management/) | PyTorch 训练流程、wandb、模型替换控制实验设计 |
 
 ---
 
